@@ -1,7 +1,10 @@
 import { counterFunc } from "./counterFunctions.js";
 import { outputNumFunc } from "./outputNumFunctions.js";
+import { generateRandom } from "./generateRandomNum.js";
 
 export const gameUI = (container) => {
+  let randomNumber = generateRandom(1, 34);
+
   container.innerHTML = "";
 
   let gameButtonsSection = document.createElement("section");
@@ -27,6 +30,6 @@ export const gameUI = (container) => {
 
   gameButtonsSection.append(decrement, outputNum, increment);
 
-  outputNumFunc(increment, decrement, outputNum);
+  outputNumFunc(increment, decrement, outputNum, randomNumber, container);
   counterFunc(increment, decrement, outputNum);
 };

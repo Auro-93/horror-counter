@@ -1,10 +1,7 @@
-export const rainEffect = (value) => {
-  let drops = document.querySelectorAll(".drop");
-  console.log(drops);
+import { removeDrops } from "./removeDrops.js";
 
-  if (drops) {
-    drops.forEach((e) => e.remove());
-  }
+export const rainEffect = (value) => {
+  removeDrops();
 
   if (value !== 0) {
     let amount = value * 13;

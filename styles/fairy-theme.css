@@ -1,0 +1,78 @@
+body[data-theme="fairy"] {
+  background-image: url("../assets/images/fairy-forest.jpg");
+}
+
+.counter-game-card[data-theme="fairy"] {
+  background-color: rgba(132, 201, 180, 0.4);
+  box-shadow: 5px 5px 15px rgb(3, 22, 27);
+}
+
+.counter-game-card[data-theme="fairy"]::after {
+  background: linear-gradient(
+      -45deg,
+      rgba(0, 157, 248, 0.6) 0%,
+      rgba(24, 81, 128, 0.6) 10%,
+      rgba(19, 160, 78, 0.6) 30%,
+      rgba(3, 67, 83, 0.6) 50%,
+      rgba(7, 81, 104, 0.6) 60%,
+      rgba(125, 216, 132, 0.6) 80%,
+      rgba(34, 107, 190, 0.6) 100%
+    )
+    repeat 0% 0% / 300% 100%;
+}
+
+.counter-game-card[data-theme="fairy"] .container {
+  color: rgb(92, 99, 35);
+  font-weight: 100;
+}
+
+.counter-game-card[data-theme="fairy"] .container h1 {
+  color: rgba(15, 49, 48, 0.8);
+  font-family: "MathildaDEMO", sans-serif;
+}
+
+.counter-game-card[data-theme="fairy"] button {
+  background-color: rgba(15, 49, 48, 1);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.2s linear;
+}
+
+.counter-game-card[data-theme="fairy"] button:active {
+  background-color: rgba(15, 49, 48, 0.6);
+  box-shadow: none;
+}
+
+.win-img {
+  background-image: url("../assets/images/light.jpg");
+  font-weight: 300;
+}
+
+/*Rain styles */
+
+body[data-theme="fairy"] .drop {
+  position: absolute;
+  background: linear-gradient(transparent, rgb(181, 212, 96));
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 10px;
+  top: 0;
+  animation: rainAnim 5s linear infinite;
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(51, 148, 31));
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(42, 125, 146));
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 3) {
+  background: linear-gradient(transparent, rgb(88, 133, 31));
+}

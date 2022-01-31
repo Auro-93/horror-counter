@@ -4,13 +4,10 @@ import { outputNumFunc } from "./outputNumFunctions.js";
 export const gameUI = (container) => {
   container.innerHTML = "";
 
-  let counterGameRain = document.createElement("section");
-  counterGameRain.classList.add("counter-game-rain");
-
   let gameButtonsSection = document.createElement("section");
   gameButtonsSection.classList.add("game-buttons");
 
-  container.append(counterGameRain, gameButtonsSection);
+  container.append(gameButtonsSection);
 
   let decrement = document.createElement("button");
   let increment = document.createElement("button");
@@ -30,6 +27,6 @@ export const gameUI = (container) => {
 
   gameButtonsSection.append(decrement, outputNum, increment);
 
-  outputNumFunc(increment, decrement, outputNum, counterGameRain);
+  outputNumFunc(increment, decrement, outputNum);
   counterFunc(increment, decrement, outputNum);
 };

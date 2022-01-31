@@ -1,4 +1,4 @@
-export const rainEffect = (value, container) => {
+export const rainEffect = (value) => {
   let drops = document.querySelectorAll(".drop");
   console.log(drops);
 

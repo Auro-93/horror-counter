@@ -1,11 +1,6 @@
 import { rainEffect } from "./rainEffect.js";
 
-export const outputNumFunc = (
-  increment,
-  decrement,
-  output,
-  counterGameRain
-) => {
+export const outputNumFunc = (increment, decrement, output) => {
   const config = { childList: true };
 
   const callback = (mutationsList, observer) => {
@@ -24,7 +19,7 @@ export const outputNumFunc = (
           increment.disabled = false;
         }
 
-        rainEffect(value, counterGameRain);
+        rainEffect(value);
       }
     }
   };

@@ -1,0 +1,108 @@
+@import url("./horror-theme.css");
+@import url("./fairy-theme.css");
+
+@font-face {
+  font-family: "Zombie_Holocaust";
+  src: url("../assets/fonts/Zombie_Holocaust.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  line-height: 2.8rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+p {
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.counter-game-card {
+  width: 500px;
+  height: 500px;
+  padding: 2rem;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  z-index: 1000;
+}
+
+.counter-game-card::after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border-radius: 100%;
+  filter: blur(8px);
+  transform: translateZ(-1px);
+  z-index: -1;
+  animation: borderAnim 6s linear infinite;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 2rem;
+}
+
+.container p {
+  margin-bottom: 2rem;
+}
+
+@keyframes borderAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

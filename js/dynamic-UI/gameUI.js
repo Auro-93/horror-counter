@@ -1,6 +1,6 @@
-import { counterFunc } from "./counterFunctions.js";
-import { outputNumFunc } from "./outputNumFunctions.js";
-import { generateRandom } from "./generateRandomNum.js";
+import { counterFunc } from "../counter-logic/counterFunctions.js";
+import { outputNumFunc } from "../counter-logic/outputNumFunctions.js";
+import { generateRandom } from "../utilities/generateRandomNum.js";
 
 export const gameUI = (container) => {
   let randomNumber = generateRandom(1, 34);

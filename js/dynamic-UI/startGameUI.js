@@ -1,6 +1,6 @@
 import { gameUI } from "./gameUI.js";
 
-export const beforeStartUI = () => {
+export const startGameUI = () => {
   let container = document.querySelector(".container");
   container.innerHTML = "";
 

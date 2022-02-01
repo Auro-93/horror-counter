@@ -3,7 +3,7 @@ body[data-theme="fairy"] {
 }
 
 .counter-game-card[data-theme="fairy"] {
-  background-color: rgba(132, 201, 180, 0.4);
+  background-color: rgba(132, 201, 180, 0.3);
   box-shadow: 5px 5px 15px rgb(3, 22, 27);
 }
 
@@ -60,7 +60,7 @@ body[data-theme="fairy"] .drop {
   background: linear-gradient(transparent, rgb(181, 212, 96));
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  height: 10px;
+  height: 0.625rem;
   top: 0;
   animation: rainAnim 5s linear infinite;
 }

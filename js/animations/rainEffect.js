@@ -1,9 +1,12 @@
 import { removeDrops } from "./removeDrops.js";
 
 export const rainEffect = (value) => {
+  /*Remove rain drops between counter value changes */
   removeDrops();
 
   if (value !== 0) {
+    /*Drops creation*/
+
     let amount = value * 13;
 
     let i = 0;

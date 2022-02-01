@@ -1,0 +1,46 @@
+/*media queries for min-width 520px*/
+
+@media screen and (min-width: 520px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+
+  .counter-game-card {
+    width: 31.25rem;
+    height: 31.25rem;
+    border-radius: 100%;
+    padding: 2rem;
+  }
+
+  .counter-game-card::after {
+    border-radius: 100%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .container .game-buttons button {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .container .game-buttons .output-num {
+    height: 15rem;
+    width: 15rem;
+    font-size: 3rem;
+  }
+
+  .game-over-img,
+  .win-img {
+    width: 14rem;
+    height: 14rem;
+  }
+}

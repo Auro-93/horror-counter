@@ -1,5 +1,5 @@
-import { beforeStartUI } from "./beforeStartUI.js";
+import { startGameUI } from "./dynamic-UI/startGameUI.js";
 
 window.addEventListener("DOMContentLoaded", (e) => {
-  beforeStartUI();
+  startGameUI();
 });

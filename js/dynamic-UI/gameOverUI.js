@@ -1,3 +1,5 @@
+import { elementTransitions } from "../animations/elementTransitions.js";
+
 export const gameOverUI = (container, random) => {
   container.innerHTML = "";
 
@@ -16,6 +18,8 @@ export const gameOverUI = (container, random) => {
   skullBg.append(results);
 
   container.append(title, skullBg, button);
+
+  elementTransitions(container);
 
   button.addEventListener("click", () => {
     window.location.reload();

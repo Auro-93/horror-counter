@@ -1,3 +1,4 @@
+import { elementTransitions } from "../animations/elementTransitions.js";
 import { counterFunc } from "../counter-logic/counterFunctions.js";
 import { outputNumFunc } from "../counter-logic/outputNumFunctions.js";
 import { generateRandom } from "../utilities/generateRandomNum.js";
@@ -29,6 +30,8 @@ export const gameUI = (container) => {
   decrement.disabled = true;
 
   gameButtonsSection.append(decrement, outputNum, increment);
+
+  elementTransitions(container);
 
   outputNumFunc(increment, decrement, outputNum, randomNumber, container);
   counterFunc(increment, decrement, outputNum);

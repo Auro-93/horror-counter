@@ -1,3 +1,5 @@
+import { elementTransitions } from "../animations/elementTransitions.js";
+
 export const winUI = (container, random) => {
   container.innerHTML = "";
 
@@ -22,6 +24,8 @@ export const winUI = (container, random) => {
   button.innerHTML = "Play again";
 
   container.append(title, bgFairy, button);
+
+  elementTransitions(container);
 
   button.addEventListener("click", () => {
     window.location.reload();

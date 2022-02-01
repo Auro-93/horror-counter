@@ -1,3 +1,4 @@
+import { elementTransitions } from "../animations/elementTransitions.js";
 import { gameUI } from "./gameUI.js";
 
 export const startGameUI = () => {
@@ -18,6 +19,8 @@ export const startGameUI = () => {
   let button = document.createElement("button");
   button.textContent = "Start game";
   container.append(title, instructions, button);
+
+  elementTransitions(container);
 
   button.addEventListener("click", (e) => {
     gameUI(container);

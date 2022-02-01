@@ -136,9 +136,9 @@ body[data-theme="horror"] .drop:nth-child(3n + 3) {
 
 @keyframes rainAnim {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-100px);
   }
   100% {
-    transform: translateY(calc(100vh - 20px));
+    transform: translateY(calc(100vh - 100px));
   }
 }

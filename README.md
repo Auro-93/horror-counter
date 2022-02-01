@@ -7,7 +7,7 @@ start2impact is an online community and platform that offers professionalizing c
 - [Overview](#overview)
   - [Concept and usage](#concept-usage)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [How to use](#installation)
   - [Links](#links)
 - [My process](#my-process)
@@ -28,7 +28,7 @@ If the computer generated number falls within the range of the counter, the user
 
 The challenge was to develop a simple counter with vanilla Javascript using the DOM manipulation features.
 
-### Screenshot
+### Screenshots
 
 Desktop start game interface:
 
@@ -43,6 +43,7 @@ Desktop game-over interface:
 ![](assets/screenshots/desktop-game-over.jpg)
 
 Desktop game-win interface:
+
 ![](assets/screenshots/desktop-game-win.jpg)
 
 Mobile start game interface:
@@ -58,6 +59,7 @@ Mobile game-over interface:
 ![](assets/screenshots/mobile-game-over.jpg)
 
 Mobile game-win interface:
+
 ![](assets/screenshots/mobile-game-win.jpg)
 
 ### How to use

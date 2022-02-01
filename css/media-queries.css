@@ -13,13 +13,11 @@
 
   .container .game-buttons button {
     font-size: 1.5rem;
-    width: 3rem;
-    height: 3rem;
   }
 
   .container .game-buttons .output-num {
-    height: 12rem;
-    width: 12rem;
+    height: 14rem;
+    width: 14rem;
     font-size: 3rem;
   }
 
@@ -62,13 +60,27 @@
     width: 90%;
   }
 
+  .container .game-buttons {
+    flex-direction: row;
+  }
+
   .container .game-buttons button {
     font-size: 1.5rem;
+    margin: 0 1rem;
     width: 3rem;
     height: 3rem;
   }
 
+  .container .game-buttons .button-increment {
+    order: 3;
+  }
+
+  .container .game-buttons .button-decrement {
+    order: 1;
+  }
+
   .container .game-buttons .output-num {
+    order: 2;
     height: 15rem;
     width: 15rem;
     animation: outputBgAnim 5s infinite;

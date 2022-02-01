@@ -71,6 +71,10 @@
   .container .game-buttons .output-num {
     height: 15rem;
     width: 15rem;
+    animation: outputBgAnim 5s infinite;
+
+    animation-timing-function: linear;
+    animation-fill-mode: both;
   }
 
   .game-over-img,
@@ -128,5 +132,33 @@
 
   body[data-theme="fairy"] .drop {
     height: 1.5rem;
+  }
+}
+
+/*Output number animation*/
+
+@keyframes outputBgAnim {
+  0% {
+    filter: brightness(100%);
+    opacity: 1;
+  }
+  25% {
+    filter: brightness(80%);
+    opacity: 0.8;
+    transform: translateY(100px);
+  }
+  50% {
+    filter: brightness(60%);
+    opacity: 0.5;
+    box-shadow: none;
+  }
+  75% {
+    filter: brightness(80%);
+    opacity: 0.8;
+    transform: translateY(-100px);
+  }
+  100% {
+    filter: brightness(100%);
+    opacity: 1;
   }
 }

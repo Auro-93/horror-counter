@@ -1,5 +1,5 @@
 body[data-theme="horror"] {
-  background-image: url("../../assets/images/creepy-forest-2.jpg");
+  background-image: url("../assets/images/creepy-forest.jpg");
 }
 
 .counter-game-card[data-theme="horror"] {

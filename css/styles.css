@@ -1,5 +1,4 @@
-@import url("./horror-theme.css");
-@import url("./fairy-theme.css");
+/*GLOBAL STYLES*/
 
 /*Horror font for titles*/
 @font-face {
@@ -126,4 +125,411 @@ button {
   font-size: 4rem;
   border-radius: 100%;
   margin-bottom: 2rem;
+}
+
+/*HORROR THEME STYLES*/
+
+body[data-theme="horror"] {
+  background-image: url("../assets/images/creepy-forest.jpg");
+}
+
+.counter-game-card[data-theme="horror"] {
+  background-color: rgba(22, 21, 21, 0.4);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+}
+
+.counter-game-card[data-theme="horror"]::after {
+  background: linear-gradient(
+      -45deg,
+      rgba(58, 12, 12, 0.4) 0%,
+      rgba(75, 13, 13, 0.3) 10%,
+      rgba(104, 18, 18, 0.3) 30%,
+      rgba(78, 17, 17, 0.3) 50%,
+      rgba(26, 2, 2, 0.3) 60%,
+      rgba(26, 2, 2, 0.4) 80%,
+      rgba(0, 0, 0, 0.4) 100%
+    )
+    repeat 0% 0% / 300% 100%;
+}
+
+.counter-game-card[data-theme="horror"] button {
+  background-color: rgba(122, 16, 16, 0.8);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.2s linear;
+}
+
+.counter-game-card[data-theme="horror"] button:active {
+  background-color: rgba(122, 16, 16, 0.6);
+  box-shadow: none;
+}
+
+.counter-game-card[data-theme="horror"] .container {
+  color: white;
+  font-weight: 100;
+}
+
+.counter-game-card[data-theme="horror"] .container h1 {
+  color: rgba(122, 16, 16, 0.8);
+  font-family: "Zombie_Holocaust", sans-serif;
+}
+
+.container .game-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .game-buttons button {
+  margin: 3rem 0;
+  font-size: 0.8rem;
+
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.container .game-buttons button[disabled] {
+  filter: brightness(40%);
+}
+
+.container .game-buttons .button-increment {
+  order: 1;
+}
+
+.container .game-buttons .button-decrement {
+  order: 3;
+}
+
+.container .game-buttons .output-num {
+  order: 2;
+  width: 10rem;
+  background-image: url("../assets/images/blood.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  height: 10rem;
+
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset,
+    rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+    rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
+    rgba(255, 255, 255, 0.09) 0px 8px 4px,
+    rgba(255, 255, 255, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px;
+
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over-img {
+  background-image: url("../assets/images/skull.jpg");
+  font-weight: 300;
+}
+
+/*Rain styles*/
+
+body[data-theme="horror"] .drop {
+  position: absolute;
+  background: linear-gradient(transparent, rgb(41, 4, 4));
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 6.25rem;
+  top: 0;
+  animation: rainAnim 5s linear infinite;
+}
+
+body[data-theme="horror"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(22, 2, 2));
+}
+
+body[data-theme="horror"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(32, 12, 12));
+}
+
+body[data-theme="horror"] .drop:nth-child(3n + 3) {
+  background: linear-gradient(transparent, rgb(49, 7, 7));
+}
+
+/*Rain animation*/
+
+@keyframes rainAnim {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(calc(100vh - 100px));
+  }
+}
+
+/*FAIRY THEME STYLES*/
+
+body[data-theme="fairy"] {
+  background-image: url("../assets/images/fairy-forest.jpg");
+}
+
+.counter-game-card[data-theme="fairy"] {
+  background-color: rgba(132, 201, 180, 0.3);
+  box-shadow: 5px 5px 15px rgb(3, 22, 27);
+}
+
+.counter-game-card[data-theme="fairy"]::after {
+  background: linear-gradient(
+      -45deg,
+      rgba(0, 157, 248, 0.6) 0%,
+      rgba(24, 81, 128, 0.6) 10%,
+      rgba(19, 160, 78, 0.6) 30%,
+      rgba(3, 67, 83, 0.6) 50%,
+      rgba(7, 81, 104, 0.6) 60%,
+      rgba(125, 216, 132, 0.6) 80%,
+      rgba(34, 107, 190, 0.6) 100%
+    )
+    repeat 0% 0% / 300% 100%;
+}
+
+.counter-game-card[data-theme="fairy"] .container {
+  color: rgb(92, 99, 35);
+  font-weight: 100;
+}
+
+.counter-game-card[data-theme="fairy"] .container h1 {
+  color: rgba(15, 49, 48, 0.8);
+  font-family: "MathildaDEMO", sans-serif;
+}
+
+.counter-game-card[data-theme="fairy"] button {
+  background-color: rgba(15, 49, 48, 1);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.2s linear;
+}
+
+.counter-game-card[data-theme="fairy"] button:active {
+  background-color: rgba(15, 49, 48, 0.6);
+  box-shadow: none;
+}
+
+.win-img {
+  background-image: url("../assets/images/light.jpg");
+  font-weight: 300;
+}
+
+/*Rain styles */
+
+body[data-theme="fairy"] .drop {
+  position: absolute;
+  background: linear-gradient(transparent, rgb(181, 212, 96));
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 0.625rem;
+  top: 0;
+  animation: rainAnim 5s linear infinite;
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(51, 148, 31));
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 1) {
+  background: linear-gradient(transparent, rgb(42, 125, 146));
+}
+
+body[data-theme="fairy"] .drop:nth-child(3n + 3) {
+  background: linear-gradient(transparent, rgb(88, 133, 31));
+}
+
+/*MEDIA QUERIES*/
+
+/*media queries for min-width 380px */
+
+@media screen and (min-width: 370px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+
+  .container .game-buttons button {
+    font-size: 1.5rem;
+  }
+
+  .container .game-buttons .output-num {
+    height: 14rem;
+    width: 14rem;
+    font-size: 3rem;
+  }
+
+  .game-over-img,
+  .win-img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+/*media queries for min-width 520px*/
+
+@media screen and (min-width: 520px) {
+  .counter-game-card[data-theme="horror"] {
+    background-color: rgba(22, 21, 21, 0.6);
+  }
+
+  .counter-game-card[data-theme="fairy"] {
+    background-color: rgba(132, 201, 180, 0.4);
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+
+  .counter-game-card {
+    width: 31.25rem;
+    height: 31.25rem;
+    border-radius: 100%;
+    padding: 2rem;
+  }
+
+  .counter-game-card::after {
+    border-radius: 100%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .container .game-buttons {
+    flex-direction: row;
+  }
+
+  .container .game-buttons button {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .container .game-buttons .button-increment {
+    order: 3;
+  }
+
+  .container .game-buttons .button-decrement {
+    order: 1;
+  }
+
+  .container .game-buttons .output-num {
+    order: 2;
+    height: 15rem;
+    width: 15rem;
+    animation: outputBgAnim 5s infinite;
+
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  .game-over-img,
+  .win-img {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+/*media queries for min-width 1440px*/
+
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    line-height: 2.8rem;
+  }
+
+  button {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    padding: 2rem !important;
+  }
+
+  .counter-game-card {
+    width: 50rem;
+    height: 50rem;
+    padding: 3rem;
+  }
+
+  .container .game-buttons button {
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .container .game-buttons .output-num {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .game-over-img,
+  .win-img {
+    margin-top: 4rem;
+    width: 18rem;
+    height: 18rem;
+  }
+
+  body[data-theme="horror"] .drop {
+    height: 8rem;
+  }
+
+  body[data-theme="fairy"] .drop {
+    height: 1.5rem;
+  }
+}
+
+/*Output number animation*/
+
+@keyframes outputBgAnim {
+  0% {
+    filter: brightness(100%);
+    opacity: 1;
+  }
+  25% {
+    filter: brightness(80%);
+    opacity: 0.8;
+    transform: translateY(100px);
+  }
+  50% {
+    filter: brightness(60%);
+    opacity: 0.5;
+    box-shadow: none;
+  }
+  75% {
+    filter: brightness(80%);
+    opacity: 0.8;
+    transform: translateY(-100px);
+  }
+  100% {
+    filter: brightness(100%);
+    opacity: 1;
+  }
 }

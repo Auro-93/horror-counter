@@ -3,7 +3,5 @@ export const removeDrops = () => {
 
   if (drops) {
     drops.forEach((e) => e.remove());
-  } else {
-    return;
   }
 };

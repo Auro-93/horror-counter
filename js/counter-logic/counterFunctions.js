@@ -5,8 +5,6 @@ export const counterFunc = (increment, decrement, output) => {
     /*Increase counter number only if it's smaller than 17*/
     if (outputNumber < 17) {
       output.textContent = outputNumber += 1;
-    } else {
-      return;
     }
   };
 
@@ -16,8 +14,6 @@ export const counterFunc = (increment, decrement, output) => {
     /*Decrease counter number only if it's greater than 0*/
     if (outputNumber > 0) {
       output.textContent = outputNumber -= 1;
-    } else {
-      return;
     }
   };
 
@@ -28,6 +24,6 @@ export const counterFunc = (increment, decrement, output) => {
       decreaseNum();
     } else if (e.key === "ArrowUp") {
       increaseNum();
-    } else return;
+    }
   });
 };
